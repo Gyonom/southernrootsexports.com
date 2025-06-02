@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SouthernRoots Exports - Premium Nigerian Agricultural Exports</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2a5c40; /* Dark green */
+            --secondary: #5a8f3c; /* Leaf green */
+            --accent: #e8c07d; /* Wheat gold */
+            --light: #f9f7f0; /* Cream */
+            --dark: #1a2e1f; /* Dark forest green */
+            --contact-bg: #1a3a2a; /* Darker green for contact sections */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap');
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header Styles */
+        header {
+            background: 
+                linear-gradient(rgba(42, 92, 64, 0.7), rgba(42, 92, 64, 0.7)),
+                url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 2rem 0;
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo img {
+            height: 70px;
+            width: auto;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .logo-tagline {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--accent);
+            margin: 0;
+            font-style: italic;
+        }
+
+        .logo-name {
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+            margin: 2px 0 0 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .logo-subtext {
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            margin: 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .contact-info {
+            background-color: var(--contact-bg);
+            padding: 0.8rem 1.2rem;
+            border-radius: 8px;
+            color: white;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .contact-info i {
+            color: var(--accent);
+            margin-right: 0.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            background-color: rgba(26, 46, 31, 0.8);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+            position: relative;
+        }
+
+        nav ul li:first-child {
+            margin-left: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+            font-size: 1.1rem;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent);
+        }
+
+        .hero {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 4rem 0;
+            max-width: 700px;
+        }
+
+        .hero h2 {
+            font-size: 3.2rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-size: 1.1rem;
+        }
+
+        .btn:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+            color: var(--primary);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .about-image {
+            flex: 1;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Products Section */
+        .products {
+            padding: 6rem 0;
+            background-color: var(--light);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-image {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .product-info {
+            padding: 2rem;
+        }
+
+        .product-info h3 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-size: 1.4rem;
+        }
+
+        .product-info p {
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+
+        /* Sustainability Section */
+        .sustainability {
+            padding: 6rem 0;
+            background-color: white;
+        }
+
+        .sustainability-content {
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .sustainability-text {
+            flex: 1;
+        }
+
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .practice-item {
+            background-color: var(--light);
+            padding: 2rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .practice-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .practice-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .sustainability-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .sustainability-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .image-caption {
+            background-color: rgba(42, 92, 64, 0.9);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            position: relative;
+        }
+
+        .image-caption i {
+            color: var(--accent);
+            font-size: 1.5rem;
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background-color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+/* Certifications Section - Enhanced */
+.certifications {
+    padding: 6rem 0; /* Increased padding */
+    background-color: var(--primary);
+    text-align: center;
+    color: white;
+    position: relative; /* For absolute positioning if needed */
+}
+
+.certifications .section-title {
+    color: white !important; /* Force white color */
+    font-size: 2.5rem;
+    margin-bottom: 3rem; /* More space below title */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Better readability */
+}
+
+.certifications .section-title::after {
+    background-color: var(--accent); /* Accent color underline */
+    width: 100px; /* Longer underline */
+    height: 4px;
+    bottom: -20px; /* Position adjustment */
+}
+
+.cert-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem; /* Slightly larger gap */
+    margin: 0 auto;
+    max-width: 1200px; /* Prevent over-stretching */
+}
+
+.cert-item {
+    background-color: white;
+    padding: 2rem 1.5rem; /* More padding */
+    border-radius: 10px; /* Smoother corners */
+    width: 220px; /* Slightly wider */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.cert-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.cert-item i {
+    color: var(--primary);
+    font-size: 3.5rem; /* Larger icon */
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.cert-item p {
+    color: var(--primary);
+    font-weight: 700; /* Bolder text */
+    margin: 0;
+    font-size: 1rem; /* Slightly larger */
+}
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 0;
+            background-color: var(--contact-bg);
+            color: white;
+        }
+
+        .contact-container {
+            display: flex;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            flex: 1;
+            background-color: transparent;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 2rem;
+            color: var(--accent);
+            font-size: 1.8rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            color: white;
+        }
+
+        .contact-info i {
+            margin-right: 1rem;
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        .contact-form {
+            flex: 1;
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+        }
+
+        .contact-form h3 {
+            color: var(--primary);
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 150px;
+        }
+
+        .submit-btn {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 4rem 0 1.5rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-column {
+            flex: 1;
+            padding: 0 1.5rem;
+            min-width: 250px;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-column ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--accent);
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-logo img {
+            height: 50px;
+            margin-right: 1rem;
+        }
+
+        .footer-logo-text h4 {
+            font-size: 1.3rem;
+            color: white;
+        }
+
+        .footer-logo-text span {
+            color: var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content,
+            .contact-container,
+            .sustainability-content {
+                flex-direction: column;
+            }
+            
+            .about-image,
+            .sustainability-image {
+                margin-top: 3rem;
+            }
+            
+            .contact-form {
+                margin-top: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .top-bar {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo {
+                margin-bottom: 1.5rem;
+                justify-content: center;
+            }
+            
+            .contact-info {
+                text-align: center;
+                margin-bottom: 1.5rem;
+                width: 100%;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 1rem;
+            }
+            
+            .hero {
+                text-align: center;
+                align-items: center;
+            }
+            
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .practice-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="top-bar">
+                <div class="logo">
+                    <!-- Fixed logo path for GitHub Pages -->
+                    <img src="https://i.ibb.co/RTGNh3rH/logo.png" alt="SouthernRoots Exports Logo">
+                    <div class="logo-text">
+                        <p class="logo-tagline">Rooted in Quality</p>
+                        <h1 class="logo-name">SOUTHERNROOTS</h1>
+                        <p class="logo-subtext">EXPORTS</p>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <p><i </p>
+                </div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#sustainability">Sustainability</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#contact-info">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="hero">
+                <h2>Premium Nigerian Agricultural Exports</h2>
+                <p>Delivering the finest ginger, soya beans, chili pepper, and hibiscus from Nigeria to global markets</p>
+                <a href="#contact" class="btn">Request Export Information</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Our Story</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Rooted in Sustainability, Growing with Purpose</h3>
+                    <p>SouthernRoots Exports was born from a deep connection to the fertile lands of central Nigeria, renowned for producing some of the most potent, oil-rich ginger in the world. This region, home to the Ham people, skilled dedicated farmers, has cultivated ginger as a cornerstone of its agricultural identity for generations.</p>
+                    <p>Recognizing the global demand for high-quality, ethically sourced produce, SouthernRoots was established to share this excellence with the world. What began with ginger has grown to include soya beans, chili pepper, hibiscus, sesame seeds and more, all guided by the needs of our customers and the principles of sustainability.</p>
+                    <p>Driven by quality, rooted in heritage, and committed to fair and transparent trade, SouthernRoots Exports delivers trusted agricultural products from Nigeria to global markets with care for people, the land and the future.</p>
+                </div>
+                <div class="about-image">
+                    <!-- Fixed image path for GitHub Pages -->
+                    <img src="https://bushlink.ng/wp-content/uploads/2025/05/images-52.jpeg" alt="Nigerian farmers harvesting ginger">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Our Harvest</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <!-- Fixed image path for GitHub Pages -->
+                        <img src="https://images.unsplash.com/photo-1603431777782-912e3b76f60d?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Premium Nigerian Ginger">
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Ginger</h3>
+                        <p>Our oil-rich Nigerian ginger is renowned for its potent flavor and aroma. Grown in the fertile soils of Jaba land using traditional methods.</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <!-- Fixed image path for GitHub Pages -->
+                        <img src="https://images.unsplash.com/photo-1639843606783-b2f9c50a7468?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c295YSUyMGJlYW5zfGVufDB8fDB8fHww" alt="Quality Soya Beans">
+                    </div>
+                    <div class="product-info">
+                        <h3>Soya Beans</h3>
+                        <p>High-protein soya beans cultivated with sustainable practices. Ideal for food processing, oil extraction, and animal feed.</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <!-- Fixed image path for GitHub Pages -->
+                        <img src="https://images.unsplash.com/photo-1647181506810-50da75f538ba?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZHJpZWQlMjBjaGlsbGklMjBwZXBwZXJ8ZW58MHx8MHx8fDA%3D" alt="Chili Pepper">
+                    </div>
+                    <div class="product-info">
+                        <h3>Chili Pepper</h3>
+                        <p>Intensely flavorful Nigerian chili peppers with perfect heat levels. Sun-dried to preserve quality and potency.</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <!-- Fixed image path for GitHub Pages -->
+                        <img src="https://images.pexels.com/photos/12494930/pexels-photo-12494930.png?auto=compress&cs=tinysrgb&w=1200" alt="Hibiscus Flowers">
+                    </div>
+                    <div class="product-info">
+                        <h3>Hibiscus</h3>
+                        <p>Vibrant hibiscus flowers perfect for teas, beverages, and natural colorants. Carefully dried to preserve color and nutrients.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability Section -->
+    <section id="sustainability" class="sustainability">
+        <div class="container">
+            <h2 class="section-title">Our Sustainable Practices</h2>
+            <div class="sustainability-content">
+                <div class="sustainability-text">
+                    <h3>From Jaba Land to the World: Ethically Grown, Responsibly Exported</h3>
+                    <p>SouthernRoots Exports is committed to preserving Nigeria's agricultural heritage while meeting global demand through sustainable methods:</p>
+                    
+                    <div class="practice-grid">
+                        <!-- Practice 1 -->
+                        <div class="practice-item">
+                            <div class="practice-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h4>Regenerative Farming</h4>
+                            <p>Our partner farmers in Jaba Land use crop rotation and organic composting to maintain soil fertility for ginger and other crops.</p>
+                        </div>
+                        
+                        <!-- Practice 2 -->
+                        <div class="practice-item">
+                            <div class="practice-icon">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <h4>Water Conservation</h4>
+                            <p>Rainwater harvesting and drip irrigation systems minimize water usage in our chili pepper and hibiscus farms.</p>
+                        </div>
+                        
+                        <!-- Practice 3 -->
+                        <div class="practice-item">
+                            <div class="practice-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4>Fair Trade Partnerships</h4>
+                            <p>Direct contracts with Ham farmers ensure fair wages and community development in Kaduna.</p>
+                        </div>
+                        
+                        <!-- Practice 4 -->
+                        <div class="practice-item">
+                            <div class="practice-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h4>Organic Certification</h4>
+                            <p>Our ginger and soya beans are grown without synthetic pesticides, certified by international organic standards.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sustainability-image">
+                    <img src="https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Sustainable farming in Nigeria">
+                    <div class="image-caption">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Harvesting ginger sustainably in Jaba Land, Kaduna – preserving traditions while meeting global standards.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2 class="section-title">Our Certifications</h2>
+            <div class="cert-logos">
+                <div class="cert-item">
+                    <i class="fas fa-certificate fa-3x" style="color: var(--primary);"></i>
+                    <p>NEPC Export License</p>
+                </div>
+                <div class="cert-item">
+                    <i class="fas fa-certificate fa-3x" style="color: var(--primary);"></i>
+                    <p>Certificate of Origin</p>
+                </div>
+                <div class="cert-item">
+                    <i class="fas fa-certificate fa-3x" style="color: var(--primary);"></i>
+                    <p>Phytosanitary Certificate</p>
+                </div>
+                <div class="cert-item">
+                    <i class="fas fa-certificate fa-3x" style="color: var(--primary);"></i>
+                    <p>Fumigation Certificate</p>
+                </div>
+                <div class="cert-item">
+                    <i class="fas fa-certificate fa-3x" style="color: var(--primary);"></i>
+                    <p>GAP Certification</p>
+                </div>
+                <div class="cert-item">
+                    <i class="fas fa-certificate fa-3x" style="color: var(--primary);"></i>
+                    <p>Organic Certification</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+                    
+                   
+                
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject">
+                                <option value="export">Export Inquiry</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="general">General Question</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <!-- Fixed logo path for GitHub Pages -->
+                        <img src="https://i.ibb.co/RTGNh3rH/logo.png" alt="SouthernRoots Exports Logo" style="height: 50px;">
+                        <div class="footer-logo-text">
+                            <h4>SOUTHERN<span style="color: var(--accent);">ROOTS</span></h4>
+                            <p>EXPORTS</p>
+                        </div>
+                    </div>
+                    <p>Premium Nigerian agricultural exports delivered worldwide with quality and integrity.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#products">Our Products</a></li>
+                        <li><a href="#sustainability">Sustainability</a></li>
+                        <li><a href="#certifications">Certifications</a></li>
+                        <li><a href="#contact-info">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Our Products</h3>
+                    <ul>
+                        <li><a href="#">Ginger</a></li>
+                        <li><a href="#">Soya Beans</a></li>
+                        <li><a href="#">Chili Pepper</a></li>
+                        <li><a href="#">Hibiscus</a></li>
+                        <li><a href="#">Sesame Seeds</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column"  id="contact-info">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 48, Usman Muazu Road, Kaduna</p>
+                    <p><i class="fas fa-phone"></i> +234 802 224 0809</p>
+                    <p><i class="fas fa-envelope"></i> info@southernrootsexports.com</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 SouthernRoots Exports. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
